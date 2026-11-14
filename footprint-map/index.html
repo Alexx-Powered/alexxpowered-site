@@ -552,17 +552,22 @@ function startVisitCounter(endpoint) {
 startVisitCounter("https://api.alexxpowered.top/footprint-map/visits");
 </script>
 <style>
-  .migration-repo { margin-top: 8px; text-align: center; }
+  #migration-receive { padding-bottom: 6px; }
+  .migration-repo { text-align: center; }
   .migration-repo a {
     display: inline-flex;
     align-items: center;
     min-height: 44px;
+    max-width: 100%;
+    box-sizing: border-box;
+    gap: 4px;
     padding-inline: 8px;
     color: #786d64;
     font-size: 12px;
     text-decoration: none;
     text-underline-offset: .2em;
   }
+  .migration-repo .repo-url { min-width: 0; overflow-wrap: anywhere; }
   .migration-repo a:is(:hover, :focus-visible) { text-decoration: underline; }
 </style>
 <dialog id="migration-receive" class="migration-dialog" aria-labelledby="receive-heading" aria-describedby="receive-details">
@@ -574,7 +579,7 @@ startVisitCounter("https://api.alexxpowered.top/footprint-map/visits");
     <button type="button" class="migration-primary" id="receive-confirm" hidden>确认导入</button>
   </div>
   <div class="migration-repo">
-    <a href="https://github.com/Alexx-Powered/footprint-map" target="_blank" rel="noopener noreferrer" aria-label="足迹地图 GitHub 仓库"><span aria-hidden="true">☆&nbsp;</span>GitHub</a>
+    <a href="https://github.com/Alexx-Powered/footprint-map" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">☆</span><span class="repo-url">https://github.com/Alexx-Powered/footprint-map</span></a>
   </div>
 </dialog>
 <script>
