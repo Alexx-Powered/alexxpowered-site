@@ -551,6 +551,20 @@ function startVisitCounter(endpoint) {
 
 startVisitCounter("https://api.alexxpowered.top/footprint-map/visits");
 </script>
+<style>
+  .migration-repo { margin-top: 8px; text-align: center; }
+  .migration-repo a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-inline: 8px;
+    color: #786d64;
+    font-size: 12px;
+    text-decoration: none;
+    text-underline-offset: .2em;
+  }
+  .migration-repo a:is(:hover, :focus-visible) { text-decoration: underline; }
+</style>
 <dialog id="migration-receive" class="migration-dialog" aria-labelledby="receive-heading" aria-describedby="receive-details">
   <h2 id="receive-heading">迁移足迹</h2>
   <p id="receive-details" role="status">正在读取旧站记录…</p>
@@ -558,6 +572,9 @@ startVisitCounter("https://api.alexxpowered.top/footprint-map/visits");
   <div class="migration-actions">
     <button type="button" id="receive-close" autofocus>取消</button>
     <button type="button" class="migration-primary" id="receive-confirm" hidden>确认导入</button>
+  </div>
+  <div class="migration-repo">
+    <a href="https://github.com/Alexx-Powered/footprint-map" target="_blank" rel="noopener noreferrer" aria-label="足迹地图 GitHub 仓库"><span aria-hidden="true">☆&nbsp;</span>GitHub</a>
   </div>
 </dialog>
 <script>
